@@ -19,11 +19,11 @@ struct IndexHeader
 
 struct IndexLumpDesc
 {
-	unsigned		m_unknown;
-	unsigned		m_lumpSize;
+	unsigned	m_unknown;
+	unsigned	m_lumpSize;
 	unsigned char	m_lumpPartID;
 	unsigned char	m_lumpID;
-	char			m_align[ 2 ];
+	char		m_align[ 2 ];
 };
 
 struct IndexFileDesc
@@ -33,7 +33,7 @@ struct IndexFileDesc
 	unsigned	m_size;
 };
 
-IndexHeader		gIndexHeader;
+IndexHeader	gIndexHeader;
 IndexLumpDesc*	gIndexLumpDescArr = NULL;
 IndexFileDesc*	gIndexFileDescArr = NULL;
 
@@ -111,7 +111,7 @@ bool ReadIndexLump( char const* srcDir )
 bool ExtractFiles( char const* srcDir, char const* dstDir )
 {
 	unsigned	fileOffset		= 0;
-	int			indexFileDescID	= -1;
+	int		indexFileDescID	= -1;
 	unsigned	writeLeft		= 0;
 	FILE*		fileDst			= NULL;
 	for ( unsigned iLumpFile = 0; iLumpFile < gIndexHeader.m_lumpFileNum; ++iLumpFile )
@@ -167,7 +167,7 @@ bool ExtractFiles( char const* srcDir, char const* dstDir )
 				unsigned const writeSize = std::min( tempBufSize - tempBufOffset, writeLeft );
 				fwrite( tempBuf + tempBufOffset, 1, writeSize, fileDst );
 				tempBufOffset	+= writeSize;
-				writeLeft		-= writeSize;
+				writeLeft	-= writeSize;
 
 				if ( writeLeft == 0 )
 				{
