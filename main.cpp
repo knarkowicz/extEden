@@ -19,11 +19,11 @@ struct IndexHeader
 
 struct IndexLumpDesc
 {
-	unsigned	m_unknown;
-	unsigned	m_lumpSize;
+	unsigned		m_unknown;
+	unsigned		m_lumpSize;
 	unsigned char	m_lumpPartID;
 	unsigned char	m_lumpID;
-	char		m_align[ 2 ];
+	char			m_align[ 2 ];
 };
 
 struct IndexFileDesc
@@ -110,10 +110,10 @@ bool ReadIndexLump( char const* srcDir )
 
 bool ExtractFiles( char const* srcDir, char const* dstDir )
 {
-	unsigned	fileOffset	= 0;
-	int		indexFileDescID	= -1;
-	unsigned	writeLeft	= 0;
-	FILE*		fileDst		= NULL;
+	unsigned	fileOffset		= 0;
+	int			indexFileDescID	= -1;
+	unsigned	writeLeft		= 0;
+	FILE*		fileDst			= NULL;
 	for ( unsigned iLumpFile = 0; iLumpFile < gIndexHeader.m_lumpFileNum; ++iLumpFile )
 	{
 		IndexLumpDesc& lumpDesc = gIndexLumpDescArr[ iLumpFile ];
