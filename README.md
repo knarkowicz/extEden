@@ -1,4 +1,6 @@
 extEden
 =======
 
-W32 PixelJunk Eden game data extractor.
+Windows PixelJunk Eden game data extractor.
+
+TabWidth=4
