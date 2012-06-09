@@ -187,7 +187,6 @@ bool ExtractFiles( char const* srcDir, char const* dstDir )
 int main( int argc, char* argv[] )
 {
 	printf( "PixelJunk Eden w32 data extractor\n" );
-	printf( "Author: Krzysztof Narkowicz, k.narkowicz@gmail.com, kriscg.blogspot.com\n" );
 	printf( "Usage: extEden.exe -s srcDir/ -d dstDir/\n" );
 
 	char const* srcDir = "";
