@@ -110,10 +110,10 @@ bool ReadIndexLump( char const* srcDir )
 
 bool ExtractFiles( char const* srcDir, char const* dstDir )
 {
-	unsigned	fileOffset		= 0;
+	unsigned	fileOffset	= 0;
 	int		indexFileDescID	= -1;
-	unsigned	writeLeft		= 0;
-	FILE*		fileDst			= NULL;
+	unsigned	writeLeft	= 0;
+	FILE*		fileDst		= NULL;
 	for ( unsigned iLumpFile = 0; iLumpFile < gIndexHeader.m_lumpFileNum; ++iLumpFile )
 	{
 		IndexLumpDesc& lumpDesc = gIndexLumpDescArr[ iLumpFile ];
